@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400&family=Big+Shoulders+Display:wght@700&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img,
+svg {
+    display: block;
+    max-width: 100%;
+    filter: grayscale(0);
+}
+
+body {
+    display: grid;
+    min-height: 100vh;
+    width: 100vw;
+    place-items: center;
+    font-family: "Lexend Deca", sans-serif;
+    background-color: hsl(0deg, 0%, 95%);
+
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    overflow: hidden;
+   margin: 1.3rem; 
+   flex-wrap: wrap;
+    min-height: 32rem;
+    max-width: 57.7rem;
+    animation: slideIn 1s ease;
+
+
+}
+@media screen and (min-width:720px)
+{
+.container {
+    margin-top: 4.625rem;
+flex-direction: row;
+animation: slideIn 1s ease;
+
+}
+}
+
+.card {
+    padding: 3rem;
+    display: flex;
+    flex: 1 1 18rem;
+
+
+    flex-direction: column;
+    gap: 1.7rem;
+    color: hsl(0deg, 0%, 100%);
+}
+.card:hover {
+    filter: brightness(1.18);
+    padding-inline: 3.4rem;
+    transition: all ease 0.3s;
+}
+.card__image:hover {
+    transition: all ease 0.5s;
+    transform: translateX(10%);
+    filter: grayscale(1);
+}
+
+.card__image {
+    max-width: 4rem;
+    margin-bottom: 0.5rem;
+}
+
+.card__title {
+    font-family: "Big Shoulders Display", sans-serif;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+.card__info {
+    color: hsla(0deg, 0%, 100%, 0.75);
+    line-height: 1.5rem;
+}
+
+.card__button {
+    margin-top: auto;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    border: 0.125rem solid hsl(0deg, 0%, 100%);
+    padding: 0.8rem 1.9rem;
+    border-radius: 2rem;
+    width: fit-content;
+    background-color: hsl(0deg, 0%, 100%);
+
+}
+
+.card__button:hover {
+    background-color: transparent;
+    color: hsl(0deg, 0%, 100%);
+}
+.card__button--sedans {
+    color: hsl(31deg, 77%, 52%);
+  }
+  
+  .card__button--suvs {
+    color: hsl(184deg, 100%, 22%);
+  }
+  
+  .card__button--luxury {
+    color: hsl(179deg, 100%, 13%);
+  }
+
+.card:nth-child(1) {
+    background-color: hsl(31deg, 77%, 52%);
+}
+
+.card:nth-child(2) {
+    background-color: hsl(184deg, 100%, 22%);
+}
+
+.card:nth-child(3) {
+    background-color: hsl(179deg, 100%, 13%);
+}
+
+@keyframes slideIn {
+    0% {
+      transform:scale(1.3);
+      opacity: 0;
+    }
+    100% {
+      transform:scale(1);
+      opacity: 1;
+    }
+  }
+
+.attribution {
+
+font-size: 0.9rem;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+    text-decoration: none;
+}
